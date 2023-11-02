@@ -3,29 +3,30 @@
 
 using namespace std;
 
-template <typename T>
-T getSum(vector<T>);
-
+int getSum(vector<int>);
+double getAverage(vector<int>);
 
 
 int main()
 {
 	vector<int> numbers {1, 2, 3, -8, 0, 1, 39, 7, 10, 12};
-	cout << getSum(numbers) << endl;
-
+	cout << "Vector summation: " << getSum(numbers) << endl;
+	cout << "Vector average: " << getAverage(numbers) << endl;
 }
 
-template <typename T>
-
-
-T getSum(vector<T> values) {
-
-	T sum = 0;
-
-	for (T i : values)
+// Function getSum is used to get the summation of all the values of a given vector
+int getSum(vector<int> values) {
+	int sum = 0;
+	for (int i : values)
 	{
 		sum += i;
 	}
 	return sum;
+}
+
+// Function getAverage is used to get the average of the values of a given vector
+double getAverage(vector<int> values)
+{
+	return static_cast<double>(getSum(values)) / values.size();
 }
 
