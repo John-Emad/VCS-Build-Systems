@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-vector_operation",
+      "appliesTo": "vector_operation.vcxproj",
+      "type": "msbuild"
+    }
+  ]
+}
